@@ -1,0 +1,73 @@
+<!--Navbar Start-->
+<div class="header" [class.toggle]="toggle" (scroll)="onWindowScroll()">
+  <div class="nav">
+    <div class="nav-wrapper">
+      <div class="company-logo">
+        <img src="img/logo.png" alt="" />
+      </div>
+      <div class="nav-links">
+        <a class="link" href="/home">Home</a>
+        <a class="link" href="javascript:void(0)" (click)="goTo('#about')"
+          >About Us</a
+        >
+        <a class="link" href="javascript:void(0)" (click)="goTo('#portfolio')"
+          >Work</a
+        >
+        <a class="link" href="#">Products</a>
+        <a class="link" href="/job">Jobs</a>
+        <a class="link" href="/contact">Contact</a>
+        <button id="get-consulting">
+          +91 9311813102, 9136437970<span class="material-symbols-outlined">
+            call
+          </span>
+        </button>
+      </div>
+      <div class="mobile-menu">
+        <button class="mobile-menu-btn">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-links">
+      <div class="wrapper">
+        <div class="links">
+          <a class="link" href="/home">Home</a>
+          <a class="link" href="#">About Us</a>
+          <a class="link" href="#">Work</a>
+          <a class="link" href="#">Products</a>
+          <a class="link" href="/job">Jobs</a>
+          <a class="link" href="/contact">Contact</a>
+          <button id="get-consulting">
+            +91 9311813102, 9136437970<span class="material-symbols-outlined">
+              call
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Navbar End-->
+<!--Home Section Start-->
+<section
+  [class.toggle]="toggle"
+  class="evlis-home-area"
+  id="home"
+  data-scroll-index="0"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="banner-welcome">
+          <h2>WELCOME TO COMPUTELIB</h2>
+          <h3>
+            WEB APIs, BUSINESS INTELLIGENCE, AI, <br />ECOMMERCE AND EDTECH
+          </h3>
+          <p>Sector 126, Opposite Amity University 201306, Noida</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Home Section End-->

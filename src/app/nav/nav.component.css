@@ -1,0 +1,254 @@
+.toggle {
+  display: none;
+}
+
+.toggle.header {
+  display: block;
+  position: static;
+  background-color: #f8f9fa;
+}
+
+.toggle.header .nav-links .link {
+  color: black !important;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  z-index: 999;
+
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.header-inverse {
+  background-color: white;
+  border-bottom: 3px solid #e9ecef;
+  transition: all 0.5s;
+}
+
+.header-inverse .nav-links .link {
+  color: black;
+}
+
+.icon-cont {
+  line-height: 0rem;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-wrapper {
+  width: 83%;
+  padding: 1.5rem 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: "Inter", sans-serif;
+  font-size: larger;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: large;
+}
+
+.nav-links .link {
+  text-decoration: none;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+#get-consulting {
+  padding: 0.5rem;
+
+  background-color: #ff5722;
+  color: var(--white);
+  border: 1px solid #ff5722;
+  font-size: medium;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#get-consulting:hover {
+  background-color: var(--white);
+  color: #ff5722;
+  border: 1px solid #ff5722;
+}
+
+#get-consulting:hover .material-symbols-outlined {
+  color: #ff5722;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 900, "GRAD" 0, "opsz" 24;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-btn {
+  background-color: #ff5722;
+  border: 1px solid #ff5722;
+
+  padding: 0.9rem 2rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-btn:active {
+  background-color: white;
+  border: 1px solid #ff5722;
+}
+
+.mobile-menu-btn:active > span {
+  color: #ff5722;
+}
+
+.mobile-nav-links .links {
+  display: none;
+  font-size: large !important;
+}
+
+@media (max-width: 1310px) {
+  .details-wrapper {
+    flex-direction: column;
+  }
+
+  .nav-wrapper {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+    font-size: larger;
+  }
+}
+
+@media (max-width: 1015px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    padding: 1rem;
+    position: relative;
+  }
+
+  .nav-wrapper {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-nav-links {
+    display: none;
+    width: 100%;
+
+    position: absolute;
+    padding: 0rem 1rem 0.5rem 1rem;
+    top: 90%;
+    right: 0%;
+    z-index: 999;
+  }
+
+  .mobile-nav-links.clicked {
+    display: block;
+  }
+
+  .mobile-nav-links .wrapper {
+    margin: auto;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    top: 90%;
+    right: 0%;
+    position: absolute;
+    padding: 0rem 1rem 0.5rem 1rem;
+  }
+
+  .mobile-nav-links .wrapper .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-family: "Inter", sans-serif;
+    font-size: larger;
+    margin: 1rem;
+    margin-top: 0;
+    padding: 1.5rem;
+
+    background-color: var(--light-grey);
+  }
+}
+
+@media (max-width: 700px) {
+  .address-email,
+  .time-socials {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  #address,
+  #email,
+  #time,
+  #socials {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .nav-wrapper {
+    padding-top: 0;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  /* .mobile-menu {
+    width: 100%;
+    justify-content: space-between;
+  } */
+
+  .mobile-menu #get-consulting {
+    padding: 1rem 2rem;
+    font-size: medium;
+  }
+}

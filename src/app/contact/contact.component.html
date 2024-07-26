@@ -1,0 +1,135 @@
+<div class="id">
+  <app-nav [class.toggle]="toggle" [toggle]="toggle"></app-nav>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Contact US</h1>
+      <p>Any question or remarks? Just write us a message!</p>
+    </div>
+    <div class="container">
+      <div class="left">
+        <div class="heading">
+          <h1>Contact Information</h1>
+          <p>Say something to start a live chat!</p>
+        </div>
+        <div class="contact-info">
+          <div class="phone">
+            <span class="material-symbols-outlined"> call </span>Mon - Fri
+            <br />
+            08:00 20:00<br />
+            +91 7303517900, 9136437970
+          </div>
+          <div class="email">
+            <span class="material-symbols-outlined"> mail </span>
+            anupam&#64;computelib.com
+          </div>
+          <div class="address">
+            <span class="material-symbols-outlined"> location_on </span>Offices:
+            Computelib Software Arm of Pustakkosh Group #7 IHDP Serenia Sector
+            127 Noida <br />
+            Sector 126 Near Amity University <br />
+            201306, Noida
+          </div>
+        </div>
+        <div class="socials">
+          <div class="social-icon">
+            <img src="facebook.svg" alt="" />
+          </div>
+          <div class="social-icon">
+            <img src="twitter.svg" alt="" />
+          </div>
+          <div class="social-icon">
+            <img src="instagram.svg" alt="" />
+          </div>
+          <div class="social-icon">
+            <img src="linkedin.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <form class="right" [formGroup]="contactForm">
+        <div class="col">
+          <div class="io">
+            <label
+              for="input-field"
+              class="input-label"
+              [class.input-error]="
+                contactForm.get('firstName')!.touched &&
+                contactForm.get('firstName')!.invalid
+              "
+              >First Name</label
+            >
+            <input
+              formControlName="firstName"
+              class="input-field"
+              type="text"
+            />
+          </div>
+          <div class="io">
+            <label
+              for="input-field"
+              class="input-label"
+              [class.input-error]="
+                contactForm.get('lastName')!.touched &&
+                contactForm.get('lastName')!.invalid
+              "
+              >Last Name</label
+            >
+            <input formControlName="lastName" class="input-field" type="text" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="io">
+            <label
+              for="input-field"
+              class="input-label"
+              [class.input-error]="
+                contactForm.get('email')!.touched &&
+                contactForm.get('email')!.invalid
+              "
+              >Email</label
+            >
+            <input formControlName="email" class="input-field" type="email" />
+          </div>
+          <div class="io">
+            <label
+              for="input-field"
+              class="input-label"
+              [class.input-error]="
+                contactForm.get('phone')!.touched &&
+                contactForm.get('phone')!.invalid
+              "
+              >Phone Number</label
+            >
+            <input formControlName="phone" class="input-field" type="text" />
+          </div>
+        </div>
+        <div class="col">
+          <div class="io message">
+            <label
+              for="input-field"
+              class="input-label"
+              [class.input-error]="
+                contactForm.get('message')!.touched &&
+                contactForm.get('message')!.invalid
+              "
+              >Message</label
+            >
+            <input formControlName="message" class="input-field" type="text" />
+          </div>
+        </div>
+        <re-captcha
+          (resolved)="resolved($event)"
+          siteKey="6Lca9hgqAAAAAJZFFUqrtp2tI0EYXTpIHxYpVWBj"
+        ></re-captcha>
+        <button
+          id="submit"
+          (click)="onSubmit()"
+          [disabled]="disabled"
+          [class.disable]="disabled"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

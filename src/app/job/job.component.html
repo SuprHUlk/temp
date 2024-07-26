@@ -1,0 +1,43 @@
+<div class="wrapper">
+  <app-nav [class.toggle]="toggle" [toggle]="toggle"></app-nav>
+  <div class="cover">
+    <div class="text">
+      <h1>Career Opening</h1>
+      <h2>Join the revolution and transform into a professional of today</h2>
+      <p>
+        Build an adrenaline pumping, exciting, high-spirited career filled with
+        electric, magnetic and flamboyant moments that shape you into a
+        true-blue technocrat
+      </p>
+    </div>
+  </div>
+  <div class="jobs">
+    <div class="header">Featured <span>jobs</span></div>
+    <div class="job-wrapper">
+      @for(job of jobs; track job) {
+      <div class="job">
+        <div class="icon">
+          <div class="img-cont">
+            <span class="material-symbols-outlined"> developer_mode_tv </span>
+          </div>
+          <div class="timing">Full Time</div>
+        </div>
+        <div class="job-title">SWE Developer</div>
+        <div class="location">Remote</div>
+        <div class="desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+          nostrum. Deserunt dicta, praesentium consequuntur sed ipsa nisi minus
+          qui doloremque, dolore officia rem. Deleniti explicabo voluptas vitae,
+          blanditiis repellendus illo.
+        </div>
+        <div class="keywords">
+          <span class="keyword">React</span>
+          <span class="keyword">Node</span>
+        </div>
+        <button id="apply">Apply</button>
+      </div>
+      }
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
